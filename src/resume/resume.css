@@ -1,0 +1,268 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+@page
+{
+    size: letter;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+:root
+{
+    --background: #fff;
+    --foreground: #333;
+    --primary: red;
+}
+
+div
+{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    height: 11in;
+    width: 8.5in;
+}
+
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Typography */
+h1 { font-size: 1.2em; }
+h2 { font-size: 1em; }
+h3 { font-size: 0.8em; }
+
+.resume
+{
+    display: grid;
+    grid-template-columns: 3in 1fr;
+
+    height: 100%;
+}
+
+.info
+{
+    border-right: 0.3em solid var(--primary);
+    padding: 0 0.5em;
+}
+
+.contact-info .name
+{
+    margin-top: 0;
+}
+
+.contact-info .job-title
+{
+    margin-top: 0em;
+    font-weight: normal;
+}
+
+.contact-link
+{
+    color: var(--foreground);
+    display: block;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+}
+
+.contact-link:hover
+{
+    text-decoration: none;
+}
+
+.contact-link i
+{
+    width: 1.4em;
+    text-align: center;
+}
+
+/* Sections */
+
+section p
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+section h1
+{
+    margin-bottom: 0;
+}
+
+.experience section 
+{
+    padding: 0 0.5em;
+}
+
+/* Title Bars */
+.titlebar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    font-size: 1.4em;
+
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+}
+
+.titlebar:after
+{
+    content: "";
+
+    position: absolute;
+    border-bottom: 3px solid;
+    left: 0;
+    right: 0;
+    bottom: -0.2em;
+}
+
+/* Projects */
+project 
+{
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 0.5em;
+}
+
+project:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+
+project:last-child
+{
+    padding-bottom: 0;
+}
+
+project .date, project .tech
+{
+    font-size: 0.8em;
+    display: block;
+}
+
+project .project_info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    flex-grow: 1;
+}
+
+project .description
+{
+    margin-top: 0.5em;
+}
+
+project .title
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+project .meta
+{
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Education */
+
+education
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+}
+
+education:last-child
+{
+    padding-bottom: 0;
+}
+
+education span
+{
+    display: block;
+}
+
+education .education_image
+{
+    width: 128px;
+    padding: 1em;
+    display: block;
+}
+
+education .education_info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+education .title
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* Work */
+
+work
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+}
+
+work .title
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+work span
+{
+    font-size: 0.8em;
+    display: block;
+}
+
+work:last-child
+{
+    padding-bottom: 0;
+}
+
+work .work_image
+{
+    width: 128px;
+    padding: 1em;
+    display: block;
+}
+
+work .work_info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+}

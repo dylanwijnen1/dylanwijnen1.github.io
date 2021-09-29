@@ -2,13 +2,15 @@
 // Colors
 //
 
-// Override Bootstrap color variables
+// Override Bootstrap theme colors variables
+$primary: #ff2020;
+$dark: #1c1e1f;
+$darker: #181a1b;
 
-$yellow: #ffc800;
+// Override Bootstrap body colors
 
-// Override Bootstrap state colors variables
-
-$primary: $yellow;
+$body-color: #d1cdc7;
+$body-bg: $darker;
 
 // Override Bootstrap contrast ratio
 
