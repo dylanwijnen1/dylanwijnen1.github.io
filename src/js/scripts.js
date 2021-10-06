@@ -46,4 +46,27 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Add Support for data-animate="animation" using IntersectionObserver API
+    // Create the observer
+    const observer = new IntersectionObserver(entries => 
+    {
+        const prefix = "animate__";
+        entries.forEach(entry => 
+        {
+            const animations = entry.target.dataset["animate"];
+            if(entry.isIntersecting && animations !== undefined)
+            {
+                entry.target.classList.add(`${prefix}animated`);
+                animations.split(" ").forEach(
+                    animation => 
+                    {
+                         entry.target.classList.add(`${prefix}${animation}`); 
+                    }
+                );
+            }
+        });
+    });
+    
+    // Tell the observer which elements to track
+    document.querySelectorAll('[data-animate]').forEach(target => observer.observe(target));
 });
