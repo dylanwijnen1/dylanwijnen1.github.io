@@ -1,0 +1,57 @@
+// Portfolio item 1 modal popup
+
+#portfolio-modal-dragonengine.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content.bg-dark
+            .close-modal(data-bs-dismiss='modal')
+                i.fa.fa-times.fa-3x
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // Project details
+                            h2.text-uppercase Dragon Engine
+                            p.item-intro.text-muted Academy of Art University
+
+                            p 
+                                | The Dragon Engine was started as a project from the Programming for Game Engines class at the Academy of Art University.
+                                | We learned about basic architectures in engines and core loops and what an Engine is in general.
+                                | Before the class started in 2018 I read up on Lua and how to add Lua to as I wanted to have an Engine with a scripting language.
+                                | Once I learned the basics of the Lua C API and I wrote a C++17 Wrapper around its concepts to easily setup bindings between C++ types.
+
+                            p
+                                | I knew this would be a larger project than just the single class and I definitely made it so. The project has gone through many revisions on all fronts.
+                                | The build system was initially MSBuild but I wanted to automate a couple of things such as being able to quickly add a dependency project and not have to worry about linking libraries.
+                                | For these features I swapped over to 
+                                a(href="https://premake.github.io/") Premake 5
+                                | and wrote a few "Dragon Engine Plugins" that would handle all the project generation. You can view it here on 
+                                a(href="https://github.com/dylanwijnen1/DragonEngine/tree/master/tools/modules") 
+                                    i.fa Github.
+                            
+                            p
+                                | I also went through many revisions of the Core Engine architecture which I drew inspiration of from The Cherno "Hazel" engine series.
+                                | After I finally got my Engine working again I was working on reworking the entire Rendering system and Component models. 
+                                | I made a few attempts at an ECS solution but never was able to find the time to really work on it with the other classes.
+                                | In the other classes I used my Engine to proof it was possible to make something and I was awarded winner of the 2019 Spring Show Award for my efforts on my Procedurally Generated Tower Defense Game.
+
+                            ul.list-inline
+                                li
+                                    strong Language(s):
+                                    | C++ 17, Lua
+                                li
+                                    strong Frameworks
+                                    | SFML, Box2D
+                                li
+                                    strong Build Tools
+                                    | Premake, Custom Tooling
+
+                            .mb-4
+                                object(type='image/svg+xml' data='https://gh-card.dev/repos/dylanwijnen1/DragonEngine.svg?link_target=_blank')
+
+                            a.btn.btn-darker.btn-xl.text-uppercase(href="https://github.com/dylanwijnen1/DragonEngine")
+                                i.fab.fa-github.me-1
+                                | View on Github
+
+                            button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-times.me-1
+                                | Close Project

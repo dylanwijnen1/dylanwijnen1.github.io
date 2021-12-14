@@ -7,6 +7,14 @@ $primary: #ff2020;
 $dark: #1c1e1f;
 $darker: #181a1b;
 
+$colors: (
+  "darker": $darker,
+);
+
+$theme-colors: (
+  "darker": $darker,
+);
+
 // Override Bootstrap body colors
 
 $body-color: #d1cdc7;
@@ -15,3 +23,7 @@ $body-bg: $darker;
 // Override Bootstrap contrast ratio
 
 $min-contrast-ratio: 1.5;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
