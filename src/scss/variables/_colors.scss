@@ -3,17 +3,10 @@
 //
 
 // Override Bootstrap theme colors variables
+
 $primary: #ff2020;
 $dark: #1c1e1f;
 $darker: #181a1b;
-
-$colors: (
-  "darker": $darker,
-);
-
-$theme-colors: (
-  "darker": $darker,
-);
 
 // Override Bootstrap body colors
 
@@ -27,3 +20,9 @@ $min-contrast-ratio: 1.5;
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+
+$custom-colors: (
+  "darker":     $darker
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
